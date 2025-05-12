@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Роль уровневых задач в обучении информатике</title>
+    <style>
+        :root {
+            --main-gradient: linear-gradient(135deg, #00c3ff 0%, #ffff1c 100%);
+            --card-gradient: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            --nav-bg: rgba(0,0,0,0.7);
+            --card-bg: rgba(255,255,255,0.95);
+            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: var(--main-gradient);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        header {
+            padding: 50px 0 30px 0;
+            text-align: center;
+            color: #fff;
+            background: transparent;
+            position: relative;
+        }
+        header h1 {
+            font-size: 2.8em;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 24px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background: var(--nav-bg);
+            border-radius: 30px;
+            margin: -20px auto 40px auto;
+            width: fit-content;
+            box-shadow: var(--shadow);
+            padding: 12px 32px;
+            position: relative;
+            z-index: 2;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            padding: 8px 18px;
+            border-radius: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: #fff;
+            color: #f5576c;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin: 0 auto 60px auto;
+            max-width: 1200px;
+        }
+        section {
+            background: var(--card-bg);
+            border-radius: 30px 10px 30px 10px;
+            box-shadow: var(--shadow);
+            padding: 32px 28px;
+            margin: 0;
+            min-width: 320px;
+            max-width: 420px;
+            flex: 1 1 350px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        section:before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 120px;
+            height: 120px;
+            background: var(--card-gradient);
+            border-radius: 50%;
+            opacity: 0.18;
+            z-index: 0;
+        }
+        section:hover {
+            transform: translateY(-8px) scale(1.03) rotate(-1deg);
+            box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.25);
+        }
+        h2 {
+            color: #f5576c;
+            margin-top: 0;
+            font-size: 1.5em;
+            position: relative;
+            z-index: 1;
+        }
+        ul, ol {
+            margin-left: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+            }
+            section {
+                max-width: 95vw;
+            }
+        }
+        section {
+            opacity: 0;
+            transform: translateY(40px) scale(0.98);
+            animation: fadeInUp 0.8s forwards;
+        }
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.3s; }
+        section:nth-child(3) { animation-delay: 0.5s; }
+        section:nth-child(4) { animation-delay: 0.7s; }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Роль уровневых задач в обучении информатике</h1>
+    </header>
+    <nav>
+        <a href="final.html">Главная</a>
+    </nav>
+    <div class="container">
+        <section>
+            <h2>Зачем нужны уровневые задачи в информатике?</h2>
+            <ul>
+                <li>Информатика требует не только запоминания фактов, но и развития логического, алгоритмического и критического мышления.</li>
+                <li>Уровневые задачи позволяют поэтапно формировать и закреплять ключевые компетенции: от базовых знаний до самостоятельного решения сложных задач.</li>
+                <li>Они помогают учитывать разный уровень подготовки учеников, делая обучение более индивидуализированным и эффективным.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Как уровневые задачи реализуются на уроках информатики?</h2>
+            <ol>
+                <li>Задания делятся на уровни: <b>базовый</b> (знание и понимание), <b>продвинутый</b> (применение и анализ), <b>творческий</b> (синтез и оценка).</li>
+                <li>Ученики могут выбирать задания по своим силам или пробовать более сложные, что способствует развитию самостоятельности.</li>
+                <li>Примеры уровневых задач:
+                    <ul>
+                        <li>Базовый: определить, необходимый код.</li>
+                        <li>Продвинутый: написать простой код.</li>
+                        <li>Творческий: оптимизировать код или предложить новое решение.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Преимущества уровневых задач в учебном процессе</h2>
+            <ul>
+                <li>Позволяют каждому ученику работать в зоне ближайшего развития, не испытывая страха перед сложными заданиями.</li>
+                <li>Способствуют формированию устойчивой мотивации к изучению предмета.</li>
+                <li>Развивают навыки самооценки и рефлексии: ученик учится анализировать свои успехи и трудности.</li>
+                <li>Обеспечивают системное и поэтапное освоение сложных тем.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Роль уровневых задач в формировании ИКТ-компетентности</h2>
+            <ul>
+                <li>Уровневые задачи способствуют развитию умений работать с информацией, анализировать и структурировать данные.</li>
+                <li>Формируют навыки программирования, поиска и устранения ошибок, что важно для современного цифрового общества.</li>
+                <li>Помогают подготовить учеников к олимпиадам, экзаменам и реальным задачам, с которыми они столкнутся в будущем.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Уровневые задачи по информатике — Таксономия Блума</title>
+  <style>
+    :root {
+      --main-gradient: linear-gradient(135deg, #00c3ff 0%, #ffff1c 100%);
+      --card-gradient: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+      --nav-bg: rgba(0,0,0,0.7);
+      --card-bg: rgba(255,255,255,0.95);
+      --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      background: var(--main-gradient);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 50px 0 30px 0;
+      text-align: center;
+      color: #fff;
+      background: transparent;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.8em;
+      letter-spacing: 2px;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.2);
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: var(--nav-bg);
+      border-radius: 30px;
+      margin: -20px auto 40px auto;
+      width: fit-content;
+      box-shadow: var(--shadow);
+      padding: 12px 32px;
+      position: relative;
+      z-index: 2;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      padding: 8px 18px;
+      border-radius: 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav a:hover {
+      background: #fff;
+      color: #f5576c;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin: 0 auto 60px auto;
+      max-width: 1200px;
+    }
+    section {
+      background: var(--card-bg);
+      border-radius: 30px 10px 30px 10px;
+      box-shadow: var(--shadow);
+      padding: 32px 28px;
+      margin: 0;
+      min-width: 320px;
+      max-width: 420px;
+      flex: 1 1 350px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(40px) scale(0.98);
+      animation: fadeInUp 0.8s forwards;
+    }
+    section:before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 120px;
+      height: 120px;
+      background: var(--card-gradient);
+      border-radius: 50%;
+      opacity: 0.18;
+      z-index: 0;
+    }
+    section:hover {
+      transform: translateY(-8px) scale(1.03) rotate(-1deg);
+      box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.25);
+    }
+    h2 {
+      color: #f5576c;
+      margin-top: 0;
+      font-size: 1.5em;
+      position: relative;
+      z-index: 1;
+    }
+    ul, ol {
+      margin-left: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+      section {
+        max-width: 95vw;
+      }
+    }
+    section:nth-child(1) { animation-delay: 0.1s; }
+    section:nth-child(2) { animation-delay: 0.3s; }
+    section:nth-child(3) { animation-delay: 0.5s; }
+    section:nth-child(4) { animation-delay: 0.7s; }
+    section:nth-child(5) { animation-delay: 0.9s; }
+    section:nth-child(6) { animation-delay: 1.1s; }
+    section:nth-child(7) { animation-delay: 1.3s; }
+    section:nth-child(8) { animation-delay: 1.5s; }
+    section:nth-child(9) { animation-delay: 1.7s; }
+    section:nth-child(10) { animation-delay: 1.9s; }
+    section:nth-child(11) { animation-delay: 2.1s; }
+    section:nth-child(12) { animation-delay: 2.3s; }
+    section:nth-child(13) { animation-delay: 2.5s; }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Уровневые задачи по информатике<br>по таксономии Блума</h1>
+  </header>
+  <nav>
+    <a href="final.html">Главная</a>
+    <a href="role.html">О таксономии</a>
+  </nav>
+  <div class="container">
+    <!-- 1. Запоминание -->
+    <section>
+      <h2>Запоминание: Определения</h2>
+      <ul>
+        <li>Дайте определение алгоритма.</li>
+        <li>Перечислите основные типы данных в Python.</li>
+        <li>Назовите этапы жизненного цикла программного обеспечения.</li>
+      </ul>
+    </section>
+    <!-- 2. Запоминание -->
+    <section>
+      <h2>Запоминание: Факты</h2>
+      <ul>
+        <li>Назовите три логические операции.</li>
+        <li>Укажите расширения файлов для текстовых и исполняемых файлов.</li>
+        <li>В каком году был изобретён первый компьютер?</li>
+      </ul>
+    </section>
+    <!-- 3. Понимание -->
+    <section>
+      <h2>Понимание: Объяснение</h2>
+      <ul>
+        <li>Объясните, что такое переменная в программировании.</li>
+        <li>Опишите разницу между компилятором и интерпретатором.</li>
+        <li>Почему важно использовать циклы в программах?</li>
+      </ul>
+    </section>
+    <!-- 4. Понимание -->
+    <section>
+      <h2>Понимание: Интерпретация</h2>
+      <ul>
+        <li>Прочитайте фрагмент кода и объясните, что он делает.</li>
+        <li>Поясните, как работает условный оператор if-else.</li>
+        <li>Опишите, что произойдет при выполнении данной программы.</li>
+      </ul>
+    </section>
+    <!-- 5. Применение -->
+    <section>
+      <h2>Применение: Решение задач</h2>
+      <ul>
+        <li>Напишите программу, которая находит сумму двух чисел.</li>
+        <li>Используйте цикл для вывода всех чётных чисел от 1 до 20.</li>
+        <li>Реализуйте функцию поиска максимального элемента в списке.</li>
+      </ul>
+    </section>
+    <!-- 6. Применение -->
+    <section>
+      <h2>Применение: Использование алгоритмов</h2>
+      <ul>
+        <li>Примените алгоритм сортировки пузырьком к заданному массиву.</li>
+        <li>Реализуйте алгоритм поиска элемента в массиве.</li>
+        <li>Используйте рекурсию для вычисления факториала числа.</li>
+      </ul>
+    </section>
+    <!-- 7. Анализ -->
+    <section>
+      <h2>Анализ: Разбор структуры</h2>
+      <ul>
+        <li>Разделите программу на логические блоки.</li>
+        <li>Определите, какие части кода отвечают за ввод и вывод данных.</li>
+        <li>Найдите ошибки в предложенном фрагменте кода.</li>
+      </ul>
+    </section>
+    <!-- 8. Анализ -->
+    <section>
+      <h2>Анализ: Сравнение</h2>
+      <ul>
+        <li>Сравните два алгоритма сортировки по эффективности.</li>
+        <li>Чем отличается линейный поиск от бинарного?</li>
+        <li>Сравните структуры данных: список и множество.</li>
+      </ul>
+    </section>
+    <!-- 9. Синтез -->
+    <section>
+      <h2>Синтез: Создание программы</h2>
+      <ul>
+        <li>Разработайте программу для подсчёта количества слов в тексте.</li>
+        <li>Создайте собственную функцию для вычисления среднего значения.</li>
+        <li>Составьте алгоритм для решения задачи о рюкзаке.</li>
+      </ul>
+    </section>
+    <!-- 10. Синтез -->
+    <section>
+      <h2>Синтез: Моделирование</h2>
+      <ul>
+        <li>Смоделируйте работу банкомата с помощью программы.</li>
+        <li>Создайте модель очереди с помощью структуры данных.</li>
+        <li>Разработайте симуляцию движения лифта.</li>
+      </ul>
+    </section>
+    <!-- 11. Оценка -->
+    <section>
+      <h2>Оценка: Критика решений</h2>
+      <ul>
+        <li>Оцените преимущества и недостатки предложенного алгоритма.</li>
+        <li>Проанализируйте, насколько эффективна данная программа.</li>
+        <li>Предложите улучшения для оптимизации кода.</li>
+      </ul>
+    </section>
+    <!-- 12. Оценка -->
+    <section>
+      <h2>Оценка: Аргументация</h2>
+      <ul>
+        <li>Обоснуйте выбор структуры данных для хранения информации.</li>
+        <li>Докажите, почему выбранный способ сортировки подходит лучше других.</li>
+        <li>Аргументируйте необходимость использования функций в программе.</li>
+      </ul>
+    </section>
+    <!-- 13. Творчество -->
+    <section>
+      <h2>Творчество: Проектирование</h2>
+      <ul>
+        <li>Придумайте и опишите собственную задачу по информатике.</li>
+        <li>Разработайте мини-проект на выбранную тему (например, "Калькулятор").</li>
+        <li>Создайте интерактивную игру с использованием изученных алгоритмов.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

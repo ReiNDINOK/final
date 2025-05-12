@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Технологическая цепочка разработки задач</title>
+    <style>
+        :root {
+            --main-gradient: linear-gradient(135deg, #00c3ff 0%, #ffff1c 100%);
+            --card-gradient: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+            --nav-bg: rgba(0,0,0,0.7);
+            --card-bg: rgba(255,255,255,0.95);
+            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: var(--main-gradient);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        header {
+            padding: 50px 0 30px 0;
+            text-align: center;
+            color: #fff;
+            background: transparent;
+            position: relative;
+        }
+        header h1 {
+            font-size: 2.8em;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 24px rgba(0,0,0,0.2);
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background: var(--nav-bg);
+            border-radius: 30px;
+            margin: -20px auto 40px auto;
+            width: fit-content;
+            box-shadow: var(--shadow);
+            padding: 12px 32px;
+            position: relative;
+            z-index: 2;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            padding: 8px 18px;
+            border-radius: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: #fff;
+            color: #f5576c;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin: 0 auto 60px auto;
+            max-width: 1200px;
+        }
+        section {
+            background: var(--card-bg);
+            border-radius: 30px 10px 30px 10px;
+            box-shadow: var(--shadow);
+            padding: 32px 28px;
+            margin: 0;
+            min-width: 320px;
+            max-width: 800px; /* увеличена ширина */
+            flex: 1 1 700px;  /* увеличена ширина */
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        section:before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 120px;
+            height: 120px;
+            background: var(--card-gradient);
+            border-radius: 50%;
+            opacity: 0.18;
+            z-index: 0;
+        }
+        section:hover {
+            transform: translateY(-8px) scale(1.03) rotate(-1deg);
+            box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.25);
+        }
+        h2 {
+            color: #f5576c;
+            margin-top: 0;
+            font-size: 1.5em;
+            position: relative;
+            z-index: 1;
+        }
+        table {
+            width: 100%;
+            min-width: 600px; /* шире */
+            border-collapse: collapse;
+            margin-top: 10px;
+            background: transparent;
+            position: relative;
+            z-index: 1;
+            display: block;
+            overflow-x: auto;
+        }
+        th, td {
+            padding: 14px 10px;
+            text-align: left;
+            border-bottom: 1px solid #f093fb;
+        }
+        th {
+            background: var(--card-gradient);
+            color: #fff;
+            font-size: 1.1em;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .tips {
+            margin-top: 30px;
+            background: #f9f7fd;
+            border-left: 6px solid #f093fb;
+            border-radius: 10px;
+            padding: 18px 24px;
+            font-size: 1.08em;
+            color: #333;
+            box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.07);
+        }
+        .tips ul {
+            margin: 0;
+            padding-left: 22px;
+        }
+        .tips li {
+            margin-bottom: 8px;
+        }
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+            }
+            section {
+                max-width: 95vw;
+            }
+            table {
+                min-width: 0;
+                width: 100%;
+                display: block;
+                overflow-x: auto;
+            }
+        }
+        section {
+            opacity: 0;
+            transform: translateY(40px) scale(0.98);
+            animation: fadeInUp 0.8s forwards;
+        }
+        section:nth-child(1) { animation-delay: 0.1s; }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Технологическая цепочка разработки задач</h1>
+    </header>
+    <nav>
+        <a href="final.html">Главная</a>
+    </nav>
+    <div class="container">
+        <section>
+            <h2>Этапы технологической цепочки</h2>
+            <table>
+                <tr>
+                    <th>Название этапа</th>
+                    <th>Основная деятельность</th>
+                </tr>
+                <tr>
+                    <td><b>Целеполагание</b></td>
+                    <td>
+                        Педагог определяет основные цели, которые требуется достичь в рамках той или иной темы. 
+                        Важно, чтобы учитель знал конечный результат своей работы — какие знания и умения будут получены учеником, если он освоит разработанную систему задач.
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Алгоритмизация</b></td>
+                    <td>
+                        Педагог определяет тип задач, подходящий для реализации в ходе одного или нескольких уроков, и выделяет для себя структуру, которой будет придерживаться при создании задач. 
+                        На этом этапе точно определяются вводные данные и конечные цели.
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Создание</b></td>
+                    <td>
+                        Завершающий этап, на котором педагог разрабатывает новые задачи. 
+                        Они могут значительно или не слишком явно отличаться от приведённых в учебнике. 
+                        Педагог может опираться на уже существующие задания, придумывая новые интересные проблемные ситуации и акцентируя внимание на тех вопросах и формулировках, которые окажут максимальное воздействие на когнитивное развитие учащихся.
+                    </td>
+                </tr>
+            </table>
+            <div class="tips">
+                <b>Педагогу следует:</b>
+                <ul>
+                    <li>использовать разнообразные типы задач для развития разных видов мышления;</li>
+                    <li>включать задания, на когнитивные навыки высокого порядка: анализа, синтеза и оценки информации;</li>
+                    <li>формулировать задачи так, чтобы они были связаны с реальными жизненными ситуациями (функциональная грамотность);</li>
+                    <li>обеспечивать постепенное усложнение задач для поэтапного развития умений;</li>
+                    <li>проводить рефлексию после выполнения задач - обсуждайте с учениками, какие подходы были эффективны;</li>
+                    <li>использовать обратную связь для корректировки и совершенствования системы задач.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
